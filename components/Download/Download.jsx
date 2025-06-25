@@ -15,7 +15,7 @@ export default function Download({ id, workOrderNumber }) {
     if (!id || !token) return;
 
     axios
-      .get(`http://127.0.0.1:8000/macGenerator/${id}/results`, {
+      .get(`https://mac-backend-two.vercel.app/macGenerator/${id}/results`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => {

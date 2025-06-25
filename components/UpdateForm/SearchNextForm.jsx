@@ -59,7 +59,7 @@ export default function SearchNextForm({ workOrderData, id = "" }) {
       console.log("paylaod of handleGenerate", payload, token);
 
       const { data } = await axios.patch(
-        `http://127.0.0.1:8000/macGenerator/${id}/generate`,
+        `https://mac-backend-two.vercel.app/macGenerator/${id}/generate`,
         payload,
         { headers: { Authorization: `Bearer ${token}` } }
       );

@@ -30,7 +30,7 @@ export default function MacGeneratorSearch() {
     try {
       const token = localStorage.getItem("accessToken");
       const response = await axios.post(
-        "http://127.0.0.1:8000/macGenerator/search",
+        "https://mac-backend-two.vercel.app/macGenerator/search",
         { ...payload, page, limit },
         {
           headers: {
@@ -50,7 +50,7 @@ export default function MacGeneratorSearch() {
     try {
       const token = localStorage.getItem("accessToken");
       const resp = await axios.get(
-        `http://127.0.0.1:8000/macGenerator/${id}/validate`,
+        `https://mac-backend-two.vercel.app/macGenerator/${id}/validate`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
       const { upToDate, message, workOrderData } = resp.data;
@@ -261,7 +261,7 @@ export default function MacGeneratorSearch() {
 //     try {
 //       const token = localStorage.getItem("accessToken");
 //       const response = await axios.post(
-//         "http://127.0.0.1:8000/macGenerator/search",
+//         "https://mac-backend-two.vercel.app/macGenerator/search",
 //         payload,
 //         {
 //           headers: {
@@ -282,7 +282,7 @@ export default function MacGeneratorSearch() {
 //     try {
 //       const token = localStorage.getItem("accessToken");
 //       const resp = await axios.get(
-//         `http://127.0.0.1:8000/macGenerator/${id}/validate`,
+//         `https://mac-backend-two.vercel.app/macGenerator/${id}/validate`,
 //         { headers: { Authorization: `Bearer ${token}` } }
 //       );
 //       const { upToDate, message } = resp.data;

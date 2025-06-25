@@ -43,7 +43,7 @@ export default function DashboardPage() {
     if (!token) return;
     try {
       const { data } = await axios.post(
-        "http://127.0.0.1:8000/macGenerator/new-work-order",
+        "https://mac-backend-two.vercel.app/macGenerator/new-work-order",
         workOrderData,
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -82,7 +82,7 @@ export default function DashboardPage() {
     console.log("handleNext", workOrderData);
     try {
       const { data } = await axios.post(
-        "http://127.0.0.1:8000/macGenerator/new-work-order",
+        "https://mac-backend-two.vercel.app/macGenerator/new-work-order",
         workOrderData,
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -136,7 +136,7 @@ export default function DashboardPage() {
       console.log("paylaod of handleGenerate", payload);
 
       const { data } = await axios.patch(
-        `http://127.0.0.1:8000/macGenerator/${id}/generate`,
+        `https://mac-backend-two.vercel.app/macGenerator/${id}/generate`,
         payload,
         { headers: { Authorization: `Bearer ${token}` } }
       );
